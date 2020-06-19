@@ -4,7 +4,8 @@ public class Word {
 
     private String mMiwokWord;
     private String mTranslatedWord;
-    private int mImageIdResource;
+    private final int NO_IMAGE = -1;
+    private int mImageIdResource = NO_IMAGE;
 
     public Word(String miwokWord, String translationWord){
         mMiwokWord = miwokWord;
@@ -32,4 +33,5 @@ public class Word {
 
     public int getImageIdResource(){ return mImageIdResource;}
 
+    public boolean hasImage(){ return mImageIdResource != NO_IMAGE;}
 }
