@@ -14,11 +14,11 @@
             />
 
         <LinearLayout
+            android:id="@+id/textBox"
             android:layout_width="match_parent"
             android:layout_height="88dp"
             android:orientation="vertical"
             android:paddingLeft="16dp"
-            android:background="#FD8E09"
             android:gravity="center_vertical">
 
             <TextView
