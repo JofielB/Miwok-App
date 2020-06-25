@@ -6,8 +6,9 @@ public class Word {
     private String mTranslatedWord;
     private final int NO_IMAGE = -1;
     private int mImageIdResource = NO_IMAGE;
+    private int mSoundResourceId;
 
-    public Word(String miwokWord, String translationWord){
+    public Word(String miwokWord, String translationWord ){
         mMiwokWord = miwokWord;
         mTranslatedWord = translationWord;
     }
@@ -18,10 +19,18 @@ public class Word {
     * @param imageResourceId  Is the resource of the image that represents the word
     *
     * */
-    public Word(String miwokWord, String translationWord, int imageResourceId){
+    public Word(String miwokWord, String translationWord, int soundResourceId){
+        mMiwokWord = miwokWord;
+        mTranslatedWord = translationWord;
+        mSoundResourceId = soundResourceId;
+    }
+
+
+    public Word(String miwokWord, String translationWord, int imageResourceId, int soundResourceId){
         mMiwokWord = miwokWord;
         mTranslatedWord = translationWord;
         mImageIdResource = imageResourceId;
+        mSoundResourceId = soundResourceId;
     }
     public String getMiwokWord() {
         return mMiwokWord;
@@ -34,4 +43,6 @@ public class Word {
     public int getImageIdResource(){ return mImageIdResource;}
 
     public boolean hasImage(){ return mImageIdResource != NO_IMAGE;}
+
+    public int getSoundResourceId() {return  mSoundResourceId;}
 }
